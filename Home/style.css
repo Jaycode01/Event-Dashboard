@@ -13,7 +13,6 @@ body{
     font-family: 'Afacad Flux';
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     height: 1000px;
 }
 
@@ -135,8 +134,99 @@ a{
 }
 
 /* Main Styling to make the  ui very friendly */
-main{
-    float: center;
-    align-items: center;
+
+
+.main_header{
+    font-size: 25px;
+    line-height: 20px;
+    height: 20px;
+    left: 268px;
+    font-weight: 400;
+    color: #000;
+    padding-top: 40px;
+    padding-left: 268px;
 }
 
+.summary-grid{
+    display: flex;
+    flex-direction: row;
+    width: 1250px;
+    height: 88px;
+    align-content: center;
+    padding-top: 54px;
+    padding-left: 268px;
+    gap: 12px;
+}
+
+.summary-grid > div{
+    width: 260px;
+    height: 100px;
+    padding: 16px;
+    border: 1.5px solid #F2F2F7;
+    border-radius: 2px;
+    gap: 16px;
+}
+
+.summary-grid > div > .summary_label{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #64748B;
+}
+
+.summary-grid > div > .summary_value{
+    height: 32px;
+    font-weight: 600px;
+    font-size: 24px;
+    line-height: 32px;
+    color: #334155;
+    padding-top: 7px;
+}
+
+.summary-grid > div > .summary_value > .level{
+    width: 33px;
+    height: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    gap: 10px;
+    padding-left: 7px;
+    color: #10B981;
+}
+
+.summary-grid > div > .summary_value > .level > img{
+    margin-right: 3px;
+}
+
+ .section_heading > p{
+    height: 12px;
+    padding-top: 100px;
+    padding-left: 268px;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.event_registration > .registration_grid_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 268px;
+    padding-top: 10px;
+    gap: 25px;
+}
+
+.graph_box{
+    width: 485px;
+    height: 320px;
+    border: 1px solid #F2F2F7;
+    border-radius: 5px;
+    padding: 40px;
+}
+
+.carousel_box{
+    width: 485px;
+    height: 320px;
+    border: 1px solid #F2F2F7;
+    border-radius: 5px;
+
+}
