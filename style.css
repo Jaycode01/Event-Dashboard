@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Funny Display";
+  src: url("./assets/fonts/Funnel_Display.woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+body {
+  font-family: "Funny Display", fantasy;
+  background: #fff;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 3%;
+}
+
+.logo img {
+  width: 200px;
+}
+
+header > .left-side-header {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  align-items: center;
+}
+
+nav {
+  background-color: #fff;
+  border: 1px solid #00000028;
+  box-shadow: 3px 3px 3px #00000013;
+  padding: 20px 50px;
+  border-radius: 50px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+  gap: 50px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-links .discover a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+}
+
+.nav-links .discover a img {
+  width: 22px;
+  margin-top: 2px;
+}
+
+header > .right-side-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+
+header > .right-side-header > .search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  width: 400px;
+  padding: 0 5px 0 10px;
+  border-radius: 30px;
+  border: 1px solid #0000006e;
+}
+
+header > .right-side-header > .search-bar > input {
+  padding: 20px;
+  width: 100%;
+  border: none;
+  border-radius: inherit;
+  outline: none;
+  font-family: inherit;
+}
+
+header > .right-side-header > .search-bar > button {
+  background: none;
+  padding: 10px 12px;
+  border: none;
+}
+
+header > .right-side-header > .search-bar > button:hover {
+  background-color: #00000025;
+  border-radius: 50%;
+}
+
+header > .right-side-header > .cta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+}
+
+header > .right-side-header > .cta > button {
+  font-family: inherit;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 15px 30px;
+}
+
+header > .right-side-header > .cta > .login {
+  color: #0a79ec;
+  background: #fff;
+  border: 1px solid #0a79ec;
+  border-radius: 30px;
+}
+
+header > .right-side-header > .cta > .signup {
+  background: #0a79ec;
+  color: #fff;
+  border: 1px solid #0a79ec;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+header > .right-side-header > .cta > .signup > img {
+  width: 18px;
+}
