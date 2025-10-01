@@ -63,6 +63,25 @@ nav {
   gap: 2px;
 }
 
+.discover-dropdown {
+  position: absolute;
+  top: 95px;
+  background: #fff;
+  box-shadow: 3px 3px 3px #00000013;
+  border: 1px solid #00000028;
+  padding: 20px;
+}
+
+.discover-dropdown > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.discover-dropdown > ul > li {
+  list-style-type: none;
+}
+
 .nav-links .discover a img {
   width: 22px;
   margin-top: 2px;
@@ -99,11 +118,9 @@ header > .right-side-header > .search-bar > button {
   background: none;
   padding: 10px 12px;
   border: none;
-}
-
-header > .right-side-header > .search-bar > button:hover {
-  background-color: #00000025;
+  background-color: #0a79ec;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 header > .right-side-header > .cta {
