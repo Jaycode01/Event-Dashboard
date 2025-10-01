@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Funnel Display";
+  src: url("assets/fonts/Funnel_Display.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Funnel Display", fantasy;
+}
