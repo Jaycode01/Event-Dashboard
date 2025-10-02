@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import beacon from "../../assets/Beacon.jpg";
 import downward_caret from "../../assets/caret-down.svg";
 import search from "../../assets/search.svg";
 import arrow_right from "../../assets/arrow-right.svg";
+import cancel from "../../assets/cancel.svg";
+import { HiOutlineBars2 } from "react-icons/hi2";
 import "./Header.css";
 
 function Header() {
@@ -66,6 +68,8 @@ function Header() {
       ],
     },
   ];
+  const [openDropdown, setopenDropdown] = useState(false);
+  const [openMenu, setopenMenu] = useState(false);
 
   return (
     <header>
@@ -104,8 +108,14 @@ function Header() {
             </li>
           </ul>
         </nav>
+        <div className="menu" onClick={() => setopenMenu(true)}>
+          <HiOutlineBars2 />
+        </div>
       </section>
-      <section className="right-side-header">
+      <section className="right-side-header desktop-nav-2">
+        <div className="cancel">
+          <img src={cancel} alt="cancel" onClick={() => setopenMenu(false)} />
+        </div>
         <div className="search-bar">
           <input type="search" placeholder="Discover your next experience..." />
           <button type="button">
@@ -119,6 +129,60 @@ function Header() {
           </button>
         </div>
       </section>
+      {openMenu && (
+        <section className="right-side-header small-screen">
+          <div className="cancel">
+            <img src={cancel} alt="cancel" onClick={() => setopenMenu(false)} />
+          </div>
+          <div className="search-bar">
+            <input
+              type="search"
+              placeholder="Discover your next experience..."
+            />
+            <button type="button">
+              <img src={search} alt="search" />
+            </button>
+          </div>
+          <ul className="mobile-nav">
+            <li>
+              <a href="#" onClick={() => setopenDropdown(!openDropdown)}>
+                Discover{" "}
+                <img src={downward_caret} className="down_caret" alt="caret" />
+              </a>
+              {openDropdown && (
+                <div className="discover-mobile-dropdown">
+                  {eventsData.map((eventByCategory, index) => (
+                    <div key={index} className="select-event">
+                      <h4 className="event_category">
+                        {eventByCategory.category}
+                      </h4>
+                      <ul className="events">
+                        {eventByCategory.events.map((event, index) => (
+                          <li key={index}>
+                            <a href="#">{event}</a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </li>
+            <li>
+              <a href="#">How It Works</a>
+            </li>
+            <li>
+              <a href="#">For Organizers</a>
+            </li>
+          </ul>
+          <div className="cta">
+            <button className="login">Login</button>
+            <button className="signup">
+              Try for Free <img src={arrow_right} alt="arrow right" />
+            </button>
+          </div>
+        </section>
+      )}
     </header>
   );
 }

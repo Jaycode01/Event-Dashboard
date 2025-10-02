@@ -97,11 +97,30 @@ nav {
   margin-top: 2px;
 }
 
+.menu {
+  font-size: 30px;
+  align-items: center;
+  cursor: pointer;
+  display: none;
+}
+
 header > .right-side-header {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 50px;
+}
+
+.cancel {
+  float: right;
+  align-self: flex-end;
+  display: none;
+  margin-right: 2.5%;
+  cursor: pointer;
+}
+
+.cancel img {
+  width: 30px;
 }
 
 header > .right-side-header > .search-bar {
@@ -133,11 +152,42 @@ header > .right-side-header > .search-bar > button {
   cursor: pointer;
 }
 
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 15px;
+  padding: 0 3%;
+  margin-top: 20px;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.mobile-nav a .down_caret {
+  width: 22px;
+  margin-top: 2px;
+}
+
 header > .right-side-header > .cta {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 25px;
+}
+
+.discover-mobile-dropdown {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  row-gap: 20px;
+  padding: 20px 0 0 50px;
 }
 
 header > .right-side-header > .cta > button {
@@ -167,4 +217,72 @@ header > .right-side-header > .cta > .signup {
 
 header > .right-side-header > .cta > .signup > img {
   width: 18px;
+}
+
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+  }
+
+  header > .left-side-header {
+    justify-content: space-between;
+    width: 100%;
+    gap: 0;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    margin-top: 15px;
+  }
+
+  header > .right-side-header.desktop-nav-2 {
+    display: none;
+  }
+
+  header > .right-side-header:not(.desktop-nav-2) {
+    position: fixed;
+    gap: 15px;
+    padding-top: 25px;
+    background: #fff;
+    height: 100vh;
+    align-items: start;
+    z-index: 999;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  header > .right-side-header > .search-bar {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  header > .right-side-header > .cta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    margin: 20px auto 0 auto;
+  }
+
+  header > .right-side-header > .cta > button {
+    width: 47.5%;
+    justify-content: center;
+  }
+
+  .cancel {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 15px;
+    padding: 0 3%;
+    margin-top: 20px;
+  }
 }
