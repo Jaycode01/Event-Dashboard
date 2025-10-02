@@ -40,9 +40,37 @@ nav {
 
 .nav-links .discover a {
   display: flex;
+  position: relative;
   flex-direction: row;
   align-items: center;
   gap: 2px;
+}
+
+.discover a:hover + .discover-dropdown,
+.discover-dropdown:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.discover-dropdown {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.select-event {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.select-event > .events {
+  list-style-type: none;
+  font-size: 14px;
+  line-height: 25px;
 }
 
 .discover-dropdown {
