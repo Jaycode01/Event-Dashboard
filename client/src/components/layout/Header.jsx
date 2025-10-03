@@ -75,7 +75,9 @@ function Header() {
     <header>
       <section className="left-side-header">
         <div className="logo">
-          <img src={beacon} alt="beacon logo" />
+          <a href="/">
+            <img src={beacon} alt="beacon logo" />
+          </a>
         </div>
         <nav>
           <ul className="nav-links">
